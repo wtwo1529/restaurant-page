@@ -1,27 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('./Poppins-Medium.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+
 .header {
-    margin-top: max(20px, 3%);
+    margin-top: max(20px, 3.5%);
     display: flex;
-    row-gap: max(10%, 60px);
+    row-gap: max(15%, 80px);
     flex-direction: column;
+    margin-bottom: 60px;
 }
 
 #logo {
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .nav-bar {
     display: flex;
     justify-content: flex-start;
-    gap: min(25%, 40px);
+    gap: min(20%, 30px);
     margin-left: max(18%, 20px);
 }
 
 .nav-btn {
     border: none;
     font-size: 17px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .header-img-container {
     text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px black solid;
+}
+
+.info-text {
+    border: 1px black solid ;
+    text-align: left;
+    font-family: 'Poppins-Medium';
+}
+
+.news {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    width: 100%;
+    flex-wrap: wrap;
+    width: 1190px;
+    margin: auto;
+    row-gap: 40px;
+    column-gap: 20px;
+}
+
+.app {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1px black;
+    border-radius: 7px;
+    row-gap: 20px;
+    padding-bottom: 50px;
+}
+
+#app-filler {
+    box-shadow: 0 0 0 0;
+}
+
+.app>h1, .app>p {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 410px;
+}
+.app>p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: -10px;
+    font-weight: 200;
+}
+.news-imgs {
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+}
+
+.news-header {
+    font-size: 26px;
+    font-weight: 700;
 }
