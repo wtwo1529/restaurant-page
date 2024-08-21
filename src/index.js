@@ -28,9 +28,10 @@ function changeImg(i) {
 
 let i = 0;
 window.onload = () => {
-    document.querySelector('#menu-btn').addEventListener("click", () => createMenu());
+    document.querySelector('#menu-btn').addEventListener("click", () => {
+        document.querySelector('.menu-content').classList.add('show');
+    });
     document.querySelector('#about-btn').addEventListener("click", () => createAboutUs());
-    
     let orderBtn = document.querySelector('#order-now');
     orderBtn.innerHTML = '<img id="order-now-photo">';
     document.querySelector('#order-now-photo').setAttribute('src', orderNowPhoto);
@@ -49,3 +50,15 @@ window.onload = () => {
     createHomePage();
     changeImg(i);
 };
+
+window.onclick = function(event) {
+    if (!event.target.matches('.menu-btn')) {
+      var dropdowns = document.getElementsByClassName("menu-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }}
