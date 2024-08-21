@@ -1,21 +1,43 @@
+
+@font-face {
+    font-family: 'Poppins Light';
+    src: url('./components/fonts/Poppins-Light.woff2') format('woff2'),
+    url('./components/fonts/Poppins-Light.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url('./components/fonts/Poppins-Medium.woff2') format('woff2'),
+    url('./components/fonts/Poppins-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins Light';
 }
 
-@font-face {
-    font-family: 'Poppins-Medium';
-    src: url('./Poppins-Medium.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
+html {
+    overflow-y: scroll;
   }
 
 .header {
-    margin-top: max(20px, 3.5%);
+    margin-top: max(20px, 3.25%);
     display: flex;
-    row-gap: max(15%, 80px);
+    row-gap: max(15%, 70px);
     flex-direction: column;
     margin-bottom: 60px;
+}
+
+button {
+    cursor: pointer;
 }
 
 #logo {
@@ -32,11 +54,17 @@
 .nav-btn {
     border: none;
     font-size: 17px;
-    margin-top: 40px;
+    margin: 0;
+    padding: 0;
+    align-self: flex-end;
 }
 
 .header-img-container {
     text-align: center;
+}
+
+#header-img {
+    cursor: pointer;
 }
 
 .info {
@@ -52,6 +80,13 @@
     font-family: 'Poppins-Medium';
 }
 
+#order-now {
+    position: fixed;
+    border: 0;
+    left: min(20%, 195px);
+    top: min(48%, 410px);
+    cursor: pointer;
+}
 .news {
     display: grid;
     grid-template-columns: auto auto;
@@ -78,6 +113,7 @@
     border-radius: 7px;
     row-gap: 20px;
     padding-bottom: 50px;
+    border: 0;
 }
 
 #app-filler {
@@ -86,14 +122,22 @@
 
 .app>h1, .app>p {
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 410px;
 }
+
+.app>h1 {
+    font-family: 'Poppins Medium';
+    font-size: 24px;
+}
+
 .app>p {
-    font-size: 16px;
+    font-family: 'Poppins Light';
+    font-size: 15px;
     line-height: 30px;
     margin-top: -10px;
     font-weight: 200;
+    color: gray;
+    letter-spacing: 0.4px;
 }
 .news-imgs {
     align-self: center;
