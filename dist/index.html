@@ -17,10 +17,10 @@
         <nav class="nav-bar">
             <button type="button" class="nav-btn logo" id="logo"></button>
             <button type="button" class="nav-btn">Latest Promotions</button>
-            <div class="menu-dropdown nav-btn">
-                <button id="menu-btn">Our Menu</button>
-                <div class="menu-content">
-                    <a href="#">Full Menu</a>
+            <div class="dropdown nav-btn">
+                <button id="menu-btn" class="dropdown-btn">Our Menu</button>
+                <div class="dropdown-content" id="menu-content">
+                    <a href="#" id="full-menu">Full Menu</a>
                     <a href="#">Promotions</a>
                     <a href="#">About Our Food</a>
                     <a href="#">About Our Breakfast</a>
@@ -28,12 +28,23 @@
                 </div>
               </div>
             <button type="button" class="nav-btn">About McDonald's Birthday Party</button>
-            <button type="button" class="nav-btn" id="about-btn">About Us</button>
+            <div class="dropdown nav-btn">
+                <button id="about-btn" class="dropdown-btn">About Us</button>
+                <div class="dropdown-content" id="about-content">
+                    <a href="#" id="our-history">Our History</a>
+                    <a href="#">Restaurant Designs</a>
+                    <a href="#">McDonald’s® Family Club</a>
+                    <a href="#">Our Achievements</a>
+                    <a href="#">Press Release</a>
+                    <a href="#">Social Responsibility</a>
+                    <a href="#">Careers</a>
+                </div>
+              </div>
             <button type="button" class="nav-btn">FAQs</button>
         </nav>
         <button type="button" id="order-now"></button>
         <div class="header-img-container">
-            <img id="header-img" src="f97790e898c533013781.jpg">
+            <img class="header-img" id="homepage" src="f97790e898c533013781.jpg">
         </div>
     </header>
     <div id="content"></div>
