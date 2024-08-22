@@ -11,15 +11,18 @@ import img5 from './components/homepage/img-slideshow5.jpg';
 import img6 from './components/homepage/more_info1.jpg';
 
 function changeImg(i) {
+    if (typeof(document.getElementById('homepage')) != undefined) {
     let images = [img1, img2, img3, img4, img5];
     let time = 3000;
     
-    const headerImg = document.querySelector('#header-img');
+    const headerImg = document.querySelector('.header-img');
     if (headerImg) {
         headerImg.setAttribute("src", images[i]);
         i = (i+1) % images.length;
         setTimeout(() => changeImg(i), time);
+        }
     }
+    return;
 }
 
 function createHomePage() {    
@@ -58,6 +61,9 @@ function createHomePage() {
     let aboutOurFood = document.createElement('div');
     // aboutOurFood.innerHTML = '<img class="more-info-img" id="about-our-food"><h1>About Our Food</h1><p>Same as our customers, McDonald\'s is highly concerned towards food safety</p>';
     // document.querySelector('#about-our-food').setAttribute('src', img6);
+
+    document.querySelector('.header-img-container').innerHTML = '<img class="header-img" id="homepage">'
+    document.querySelector('.header-img').setAttribute('src', img1);
 
     let content = document.querySelector('#content');
     content.innerHTML = '';
