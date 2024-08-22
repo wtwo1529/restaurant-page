@@ -4,27 +4,8 @@ import {default as createHomePage} from "./homepage";
 
 import './style.css';
 
-import img1 from './components/homepage/img-slideshow1.jpg';
-import img2 from './components/homepage/img-slideshow2.jpg';
-import img3 from './components/homepage/img-slideshow3.jpg';
-import img4 from './components/homepage/img-slideshow4.jpg';
-import img5 from './components/homepage/img-slideshow5.jpg';
-
 import logo from './components/homepage/logo-1.png'
 import orderNowPhoto from './components/homepage/order_now.png';
-
-
-function changeImg(i) {
-    let images = [img1, img2, img3, img4, img5];
-    let time = 3000;
-    
-    const headerImg = document.querySelector('#header-img');
-    if (headerImg) {
-        headerImg.setAttribute("src", images[i]);
-        i = (i+1) % images.length;
-        setTimeout(() => changeImg(i), time);
-    }
-}
 
 let i = 0;
 window.onload = () => {
@@ -48,7 +29,6 @@ window.onload = () => {
     })
 
     createHomePage();
-    changeImg(i);
 };
 
 window.onclick = function(event) {

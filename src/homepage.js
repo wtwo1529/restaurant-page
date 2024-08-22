@@ -2,6 +2,26 @@ import news1 from './components/homepage/homepage_img1.jpg';
 import news2 from './components/homepage/homepage_img2.jpg';
 import news3 from './components/homepage/homepage_img3.jpg';
 
+import img1 from './components/homepage/img-slideshow1.jpg';
+import img2 from './components/homepage/img-slideshow2.jpg';
+import img3 from './components/homepage/img-slideshow3.jpg';
+import img4 from './components/homepage/img-slideshow4.jpg';
+import img5 from './components/homepage/img-slideshow5.jpg';
+
+import img6 from './components/homepage/more_info1.jpg';
+
+function changeImg(i) {
+    let images = [img1, img2, img3, img4, img5];
+    let time = 3000;
+    
+    const headerImg = document.querySelector('#header-img');
+    if (headerImg) {
+        headerImg.setAttribute("src", images[i]);
+        i = (i+1) % images.length;
+        setTimeout(() => changeImg(i), time);
+    }
+}
+
 function createHomePage() {    
     let news = document.createElement('div');
     news.classList.add('news');
@@ -33,6 +53,12 @@ function createHomePage() {
     news.appendChild(app3);
     news.appendChild(appFiller);
 
+    let moreInformation = document.createElement('div');
+    
+    let aboutOurFood = document.createElement('div');
+    // aboutOurFood.innerHTML = '<img class="more-info-img" id="about-our-food"><h1>About Our Food</h1><p>Same as our customers, McDonald\'s is highly concerned towards food safety</p>';
+    // document.querySelector('#about-our-food').setAttribute('src', img6);
+
     let content = document.querySelector('#content');
     content.innerHTML = '';
     content.appendChild(news);
@@ -40,6 +66,9 @@ function createHomePage() {
     document.querySelector('#news-img1').setAttribute('src', news1);
     document.querySelector('#news-img2').setAttribute('src', news2);
     document.querySelector('#news-img3').setAttribute('src', news3);
+    
+    let i = 0;
+    changeImg(i);
 }
 
 export default createHomePage; 
