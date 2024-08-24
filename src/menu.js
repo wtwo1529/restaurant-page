@@ -255,9 +255,182 @@ function createMenu() {
     menuHeader1.innerText = 'Meals and Value';
     menuHeader1.setAttribute('class', 'menu-header')
     
+    let mealsValue = document.createElement('div');
+    mealsValue.classList.add('menu-category');
+
+    let happyMeals = document.createElement('div');
+    happyMeals.classList.add('menu-module');
+    let happyMealsImg = document.createElement('img');
+    happyMealsImg.setAttribute('src', happyMealImg);
+    happyMealsImg.classList.add('menu-img');
+    let happyMealsHeader = document.createElement('p');
+    happyMealsHeader.classList.add('sub-header');
+    happyMealsHeader.innerText = 'Happy Meals';
+    
+    happyMeals.appendChild(happyMealsImg);
+    happyMeals.appendChild(happyMealsHeader);
+
+    let evMeals = document.createElement('div');
+    evMeals.classList.add('menu-module');
+    let evMealsImg = document.createElement('img');
+    evMealsImg.setAttribute('src', extraValueImg);
+    evMealsImg.classList.add('menu-img');
+    let evMealsHeader = document.createElement('p')
+    evMealsHeader.classList.add('sub-header');
+    evMealsHeader.innerText = "Extra Value Meals";
+    
+    evMeals.appendChild(evMealsImg)
+    evMeals.appendChild(evMealsHeader)
+    
+    let evBreakfasts = document.createElement('div');
+    evBreakfasts.classList.add('menu-module');
+    let evBreakfastsImg = document.createElement('img');
+    evBreakfastsImg.setAttribute('src', extraValueBreakfastsImg)
+    evBreakfastsImg.classList.add('menu-img');
+    let evBreakfastsHeader = document.createElement('p');
+    evBreakfastsHeader.classList.add('sub-header')
+    evBreakfastsHeader.innerText = 'Extra Value Breakfasts';
+
+    evBreakfasts.appendChild(evBreakfastsImg);
+    evBreakfasts.appendChild(evBreakfastsHeader);
+
+    mealsValue.appendChild(happyMeals);
+    mealsValue.appendChild(evMeals);
+    mealsValue.appendChild(evBreakfasts);
+
     menu.appendChild(menuHeader1);
+    menu.appendChild(mealsValue);
+
+    let alacarteHeader = document.createElement('h1');
+    alacarteHeader.innerText = 'A-la-carte';
+    alacarteHeader.classList.add('menu-header');
+
+    menu.appendChild(alacarteHeader);
+
+    let alacarte = document.createElement('div');
+    alacarte.classList.add('menu-category');
+
+    let burgersMenu = document.createElement('div');
+    burgersMenu.classList.add('menu-module');
+    let burgersMenuImg = document.createElement('img');
+    burgersMenuImg.setAttribute('src', burgerImg);
+    burgersMenuImg.classList.add('menu-img');
+    let burgersMenuHeader = document.createElement('p');
+    burgersMenuHeader.classList.add('sub-header');
+    burgersMenuHeader.innerText = 'Burgers';
+    
+    burgersMenu.appendChild(burgersMenuImg);
+    burgersMenu.appendChild(burgersMenuHeader);
+
+    alacarte.appendChild(burgersMenu);
+
+    let breakfastMenu = document.createElement('div');
+    breakfastMenu.classList.add('menu-module');
+    let breakfastMenuImg = document.createElement('img');
+    breakfastMenuImg.setAttribute('src', breakfastImg);
+    breakfastMenuImg.classList.add('menu-img');
+    let breakfastMenuHeader = document.createElement('p');
+    breakfastMenuHeader.classList.add('sub-header');
+    breakfastMenuHeader.innerText = 'Breakfast Platter and Twisty Pasta';
+    
+    breakfastMenu.appendChild(breakfastMenuImg);
+    breakfastMenu.appendChild(breakfastMenuHeader);
+
+    alacarte.appendChild(breakfastMenu);
+
+    let valuePicksMenu = document.createElement('div');
+    valuePicksMenu.classList.add('menu-module');
+    let valuePicksMenuImg = document.createElement('img');
+    valuePicksMenuImg.setAttribute('src', valuePicksImg);
+    valuePicksMenuImg.classList.add('menu-img');
+    let valuePicksMenuHeader = document.createElement('p');
+    valuePicksMenuHeader.classList.add('sub-header');
+    valuePicksMenuHeader.innerText = 'Value Picks';
+    
+    valuePicksMenu.appendChild(valuePicksMenuImg);
+    valuePicksMenu.appendChild(valuePicksMenuHeader);
+
+    alacarte.appendChild(valuePicksMenu);
+
+    let snacksSidesMenu = document.createElement('div');
+    snacksSidesMenu.classList.add('menu-module');
+    let snacksSidesMenuImg = document.createElement('img');
+    snacksSidesMenuImg.setAttribute('src', snacksSidesImg);
+    snacksSidesMenuImg.classList.add('menu-img');
+    let snacksSidesMenuHeader = document.createElement('p');
+    snacksSidesMenuHeader.classList.add('sub-header');
+    snacksSidesMenuHeader.innerText = 'Snacks and Sides';
+    
+    snacksSidesMenu.appendChild(snacksSidesMenuImg);
+    snacksSidesMenu.appendChild(snacksSidesMenuHeader);
+
+    alacarte.appendChild(snacksSidesMenu);
+
+    let saladsMenu = document.createElement('div');
+    saladsMenu.classList.add('menu-module');
+    let saladsMenuImg = document.createElement('img');
+    saladsMenuImg.setAttribute('src', saladsImg);
+    saladsMenuImg.classList.add('menu-img');
+    let saladsMenuHeader = document.createElement('p');
+    saladsMenuHeader.classList.add('sub-header');
+    saladsMenuHeader.innerText = 'Salads';
+    
+    saladsMenu.appendChild(saladsMenuImg);
+    saladsMenu.appendChild(saladsMenuHeader);
+
+    alacarte.appendChild(saladsMenu);
+    
+    let dessertsMenu = document.createElement('div');
+    dessertsMenu.classList.add('menu-module');
+    let dessertsMenuImg = document.createElement('img');
+    dessertsMenuImg.setAttribute('src', dessertsImg);
+    dessertsMenuImg.classList.add('menu-img');
+    let dessertsMenuHeader = document.createElement('p');
+    dessertsMenuHeader.classList.add('sub-header');
+    dessertsMenuHeader.innerText = 'Salads';
+    
+    dessertsMenu.appendChild(dessertsMenuImg);
+    dessertsMenu.appendChild(dessertsMenuHeader);
+
+    alacarte.appendChild(dessertsMenu);
+
+    let beveragesMenu = document.createElement('div');
+    beveragesMenu.classList.add('menu-module');
+    let beveragesMenuImg = document.createElement('img');
+    beveragesMenuImg.setAttribute('src', beveragesImg);
+    beveragesMenuImg.classList.add('menu-img');
+    let beveragesMenuHeader = document.createElement('p');
+    beveragesMenuHeader.classList.add('sub-header');
+    beveragesMenuHeader.innerText = 'Beverages';
+    
+    beveragesMenu.appendChild(beveragesMenuImg);
+    beveragesMenu.appendChild(beveragesMenuHeader);
+
+    alacarte.appendChild(beveragesMenu);
+
+    let mcCafeMenu = document.createElement('div');
+    mcCafeMenu.classList.add('menu-module');
+    let mcCafeMenuImg = document.createElement('img');
+    mcCafeMenuImg.setAttribute('src', mccafeImg);
+    mcCafeMenuImg.classList.add('menu-img');
+    let mcCafeMenuHeader = document.createElement('p');
+    mcCafeMenuHeader.classList.add('sub-header');
+    mcCafeMenuHeader.innerText = 'McCafé';
+    
+    mcCafeMenu.appendChild(mcCafeMenuImg);
+    mcCafeMenu.appendChild(mcCafeMenuHeader);
+
+    alacarte.appendChild(mcCafeMenu);
+
+    let fillerMenu = document.createElement('div');
+    fillerMenu.classList.add('menu-module');
+    alacarte.appendChild(fillerMenu);
+
+    menu.append(alacarte);
+
     body.appendChild(sideBar);
     body.appendChild(menu);
+
     contentDiv.appendChild(body);
 
 }
